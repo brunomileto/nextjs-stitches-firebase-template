@@ -2,7 +2,7 @@ import type { GetServerSideProps } from 'next'
 import React from 'react'
 import { styled } from '../../stitches.config'
 import { globalStyles } from '../styles/global'
-import logo from '../assets/vercel.svg'
+//import logo from '../assets/vercel.svg'
 import { Container } from '../styles/pages/Home'
 
 const Text = styled('p', {
@@ -27,13 +27,14 @@ const Text = styled('p', {
 interface HomeProps {
   repositories: string[]
 }
-
+//
+//<img id="svn-img" src={logo} alt="" />
 export default function Home(props: HomeProps) {
   return (
     <>
       {globalStyles()}
-      <img src={logo} alt="" />
       <Container>
+        <h1 id="svn-img">teste</h1>
         <ul>
           {props.repositories.map((repo: string) => (
             <li key={repo}>
